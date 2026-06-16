@@ -49,11 +49,11 @@ const SKILLS = [
 
 const PROJECTS = [
   {
-    title: "Cloud Task Orchestrator",
-    description: "A centralized dashboard for distributed teams. Supports drag-and-drop workflow construction, automatic email alerts, and live sync.",
-    tech: ["React", "Node.js", "Tailwind CSS", "MongoDB"],
-    github: "https://github.com",
-    live: "https://example.com"
+    title: "ExpenseIQ – Personal Finance Tracker",
+    description: "A sleek personal finance dashboard with income vs. expense analytics, category breakdowns, top spending insights, and a full transaction history — all in a dark, modern UI.",
+    tech: ["React", "Vite", "Tailwind CSS", "Recharts"],
+    github: "https://github.com/Abhigyangogoi-dev/expense-tracker",
+    live: "https://expense-tracker-five-eta-53.vercel.app/"
   },
   {
     title: "E-Commerce Core Engine",
