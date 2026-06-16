@@ -137,6 +137,7 @@ function App() {
             <a href="#skills" className="hover:text-neutral-100 transition-colors">Skills</a>
             <a href="#projects" className="hover:text-neutral-100 transition-colors">Projects</a>
             <a href="#certificates" className="hover:text-neutral-100 transition-colors">Certificates</a>
+            <a href="#achievements" className="hover:text-neutral-100 transition-colors">Achievements</a>
             <a href="#contact" className="hover:text-neutral-100 transition-colors">Contact</a>
           </nav>
 
@@ -399,6 +400,105 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section id="achievements" className="max-w-6xl mx-auto px-6 py-20 md:py-28 border-b border-neutral-900">
+          <div className="space-y-4 mb-12">
+            <h2 className="text-sm font-semibold tracking-wider text-neutral-400 uppercase">
+              Achievements
+            </h2>
+            <h3 className="text-2xl sm:text-3xl font-bold text-neutral-100">
+              Coding Milestones
+            </h3>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+
+            {/* HackerRank */}
+            <div className="bg-neutral-900/50 border border-neutral-900 rounded-xl overflow-hidden">
+              <div className="flex items-center gap-3 px-6 py-4 border-b border-neutral-800 bg-neutral-900/80">
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#39C15C">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.188 18.462h-1.832v-5.077h-3.663v5.077H4.485V5.538h1.832v5.923h3.663V5.538h1.832v12.924zm5.906.192c-.96 0-1.727-.268-2.3-.805-.573-.537-.859-1.28-.859-2.23 0-.972.296-1.73.888-2.274.592-.544 1.408-.816 2.448-.816.384 0 .756.038 1.116.115v1.523a3.15 3.15 0 00-.984-.154c-.504 0-.9.134-1.188.4-.288.268-.432.648-.432 1.14 0 .48.142.856.426 1.128.284.272.678.408 1.182.408.364 0 .716-.056 1.056-.168v1.538c-.384.13-.828.195-1.353.195z"/>
+                </svg>
+                <span className="text-base font-bold text-neutral-100">HackerRank</span>
+                <a href="https://www.hackerrank.com" target="_blank" rel="noreferrer" className="ml-auto text-xs text-neutral-500 hover:text-neutral-300 transition-colors">View Profile →</a>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { stars: '5 ★', label: 'Problem Solving' },
+                    { stars: '4 ★', label: 'C++ / OOP' },
+                    { stars: '3 ★', label: 'SQL' },
+                    { stars: '3 ★', label: 'JavaScript' },
+                  ].map(({ stars, label }) => (
+                    <div key={label} className="bg-neutral-950 border border-neutral-800 rounded-lg p-4 text-center">
+                      <div className="text-xl font-bold text-neutral-100">{stars}</div>
+                      <div className="text-xs text-neutral-400 mt-1">{label}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-2 pt-2">
+                  <p className="text-xs text-neutral-500 uppercase font-mono tracking-wider">Certifications Earned</p>
+                  {[
+                    'Problem Solving (Basic)',
+                    'Problem Solving (Intermediate)',
+                    'JavaScript (Basic)',
+                  ].map((cert) => (
+                    <div key={cert} className="flex items-center gap-2 text-sm text-neutral-300">
+                      <svg className="h-4 w-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {cert}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* LeetCode */}
+            <div className="bg-neutral-900/50 border border-neutral-900 rounded-xl overflow-hidden">
+              <div className="flex items-center gap-3 px-6 py-4 border-b border-neutral-800 bg-neutral-900/80">
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="#FFA116">
+                  <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+                </svg>
+                <span className="text-base font-bold text-neutral-100">LeetCode</span>
+                <a href="https://leetcode.com" target="_blank" rel="noreferrer" className="ml-auto text-xs text-neutral-500 hover:text-neutral-300 transition-colors">View Profile →</a>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { value: '150+', label: 'Problems Solved', color: 'text-neutral-100' },
+                    { value: '1,487', label: 'Contest Rating', color: 'text-yellow-400' },
+                    { value: 'Top 25%', label: 'Global Rank', color: 'text-neutral-100' },
+                  ].map(({ value, label, color }) => (
+                    <div key={label} className="bg-neutral-950 border border-neutral-800 rounded-lg p-4 text-center">
+                      <div className={`text-lg font-bold ${color}`}>{value}</div>
+                      <div className="text-xs text-neutral-400 mt-1">{label}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="space-y-3 pt-2">
+                  <p className="text-xs text-neutral-500 uppercase font-mono tracking-wider">Problem Breakdown</p>
+                  {[
+                    { label: 'Easy', count: 72, pct: 72, color: 'bg-green-500' },
+                    { label: 'Medium', count: 64, pct: 64, color: 'bg-yellow-400' },
+                    { label: 'Hard', count: 14, pct: 28, color: 'bg-red-500' },
+                  ].map(({ label, count, pct, color }) => (
+                    <div key={label}>
+                      <div className="flex justify-between text-xs text-neutral-400 mb-1">
+                        <span>{label}</span>
+                        <span>{count} solved</span>
+                      </div>
+                      <div className="h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+                        <div className={`h-full ${color} rounded-full`} style={{ width: `${pct}%` }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
