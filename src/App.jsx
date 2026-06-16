@@ -1,5 +1,32 @@
 import { useState } from 'react'
 import developerPortrait from './assets/pic.jpeg'
+import {
+  SiReact, SiJavascript, SiTailwindcss, SiHtml5, SiVite, SiTypescript,
+  SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiGraphql,
+  SiGit, SiDocker, SiAmazonwebservices, SiLinux, SiVercel, SiGithub
+} from 'react-icons/si'
+import { TbApi, TbPipeline } from 'react-icons/tb'
+
+const SKILL_ICONS = {
+  'React':              { icon: SiReact,            color: '#61DAFB' },
+  'JavaScript (ES6+)':  { icon: SiJavascript,       color: '#F7DF1E' },
+  'Tailwind CSS':       { icon: SiTailwindcss,      color: '#06B6D4' },
+  'HTML5 & CSS3':       { icon: SiHtml5,            color: '#E34F26' },
+  'Vite':               { icon: SiVite,             color: '#646CFF' },
+  'TypeScript':         { icon: SiTypescript,       color: '#3178C6' },
+  'Node.js':            { icon: SiNodedotjs,        color: '#339933' },
+  'Express.js':         { icon: SiExpress,          color: '#aaaaaa' },
+  'REST APIs':          { icon: TbApi,              color: '#FF6B6B' },
+  'PostgreSQL':         { icon: SiPostgresql,       color: '#4169E1' },
+  'MongoDB':            { icon: SiMongodb,          color: '#47A248' },
+  'GraphQL':            { icon: SiGraphql,          color: '#E10098' },
+  'Git & GitHub':       { icon: SiGithub,           color: '#aaaaaa' },
+  'Docker':             { icon: SiDocker,           color: '#2496ED' },
+  'AWS (S3/EC2)':       { icon: SiAmazonwebservices,color: '#FF9900' },
+  'CI/CD Pipelines':    { icon: TbPipeline,         color: '#22D3EE' },
+  'Linux Shell':        { icon: SiLinux,            color: '#FCC624' },
+  'Vercel':             { icon: SiVercel,           color: '#aaaaaa' },
+}
 
 const SKILLS = [
   {
@@ -46,21 +73,24 @@ const CERTIFICATES = [
     issuer: "Lovely Professional University",
     date: "Dec 2024",
     credentialId: "20A10D635J9AK00L8",
-    link: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BTDlpXyM%2BHGcn400eCT%2Ft94zB1F2GAuL8%3D"
+    link: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BTDlpXyM%2BHGcn400eCT%2Ft94zB1F2GAuL8%3D",
+    image: null // replace with: import cert1 from './assets/cert-dsa.png'
   },
   {
     title: "Object Oriented Programming",
     issuer: "Lovely Professional University",
     date: "Dec 2024",
     credentialId: "270k8Cl2dm7D23d77",
-    link: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BlfO1oQtDvi4S3wv7twfmjbGZNi8a2v%2B0%3D"
+    link: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BlfO1oQtDvi4S3wv7twfmjbGZNi8a2v%2B0%3D",
+    image: null // replace with: import cert2 from './assets/cert-oop.png'
   },
   {
     title: "Legacy Responsive Web Design V8",
     issuer: "freeCodeCamp",
     date: "Dec 2023",
     credentialId: "fccb36e6efe-7b12-45b3-aaa0-bfb36942cd8d",
-    link: "https://www.freecodecamp.org/certification/fccb36e6efe-7b12-45b3-aaa0-bfb36942cd8d/responsive-web-design"
+    link: "https://www.freecodecamp.org/certification/fccb36e6efe-7b12-45b3-aaa0-bfb36942cd8d/responsive-web-design",
+    image: null // replace with: import cert3 from './assets/cert-webdesign.png'
   }
 ]
 
@@ -166,7 +196,7 @@ function App() {
         <section id="hero" className="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-12 border-b border-neutral-900">
           <div className="flex-1 space-y-6 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-neutral-100 leading-tight">
-              Hi, I'm <span className="text-neutral-50 underline decoration-neutral-700 underline-offset-8">Abhigyan</span>
+              Hello, I'm <span className="text-neutral-50 underline decoration-neutral-700 underline-offset-8">Abhigyan</span>
             </h1>
             <p className="text-lg sm:text-xl text-neutral-400 max-w-lg leading-relaxed mx-auto md:mx-0">
               A dedicated software developer building clean, high-performance, and scalable web applications with modern technologies.
@@ -232,14 +262,19 @@ function App() {
                   {grp.category}
                 </h4>
                 <ul className="flex flex-wrap gap-2 pt-2">
-                  {grp.items.map((skill) => (
-                    <li
-                      key={skill}
-                      className="bg-neutral-950 text-neutral-300 text-xs px-3 py-1.5 rounded-md border border-neutral-800"
-                    >
-                      {skill}
-                    </li>
-                  ))}
+                  {grp.items.map((skill) => {
+                    const entry = SKILL_ICONS[skill]
+                    const Icon = entry?.icon
+                    return (
+                      <li
+                        key={skill}
+                        className="flex items-center gap-1.5 bg-neutral-950 text-neutral-300 text-xs px-3 py-1.5 rounded-md border border-neutral-800 hover:border-neutral-700 transition-colors"
+                      >
+                        {Icon && <Icon style={{ color: entry.color }} className="shrink-0" size={13} />}
+                        {skill}
+                      </li>
+                    )
+                  })}
                 </ul>
               </div>
             ))}
@@ -315,30 +350,48 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {CERTIFICATES.map((cert) => (
-              <div key={cert.title} className="bg-neutral-900/50 border border-neutral-900 p-6 rounded-xl flex flex-col justify-between">
-                <div className="space-y-3">
+              <div key={cert.title} className="bg-neutral-900/50 border border-neutral-900 rounded-xl flex flex-col justify-between overflow-hidden">
+                {/* Certificate image preview */}
+                <a href={cert.link} target="_blank" rel="noreferrer" className="block">
+                  {cert.image ? (
+                    <img
+                      src={cert.image}
+                      alt={`${cert.title} certificate`}
+                      className="w-full h-44 object-cover transition-opacity hover:opacity-90"
+                    />
+                  ) : (
+                    <div className="w-full h-44 bg-neutral-900 border-b border-neutral-800 flex items-center justify-center">
+                      <svg className="h-10 w-10 text-neutral-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                      </svg>
+                    </div>
+                  )}
+                </a>
+
+                <div className="p-6 space-y-3 flex flex-col flex-1">
                   <div className="text-xs text-neutral-400 uppercase font-mono tracking-wider">
                     {cert.issuer} &bull; {cert.date}
                   </div>
                   <h4 className="text-base font-bold text-neutral-100">
                     {cert.title}
                   </h4>
-                  <div className="text-xs text-neutral-400 bg-neutral-950 p-2.5 rounded border border-neutral-900 font-mono select-all mt-3">
+                  <div className="text-xs text-neutral-400 bg-neutral-950 p-2.5 rounded border border-neutral-900 font-mono select-all">
                     ID: {cert.credentialId}
                   </div>
-                </div>
-                <div className="pt-6 border-t border-neutral-900 mt-6 text-sm">
-                  <a
-                    href={cert.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 text-neutral-300 hover:text-neutral-100 transition-colors"
-                  >
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    Verify Credential
-                  </a>
+
+                  <div className="pt-4 border-t border-neutral-900 mt-auto text-sm">
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-neutral-300 hover:text-neutral-100 transition-colors"
+                    >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      Verify Credential
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
