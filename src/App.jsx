@@ -365,7 +365,7 @@ function App() {
                   <svg className="h-5 w-5 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <a href="mailto:abhig@example.com" className="hover:text-neutral-100 transition-colors text-sm">
+                  <a href="mailto:abhigyansmile@gmail.com" className="hover:text-neutral-100 transition-colors text-sm">
                     abhig@example.com
                   </a>
                 </div>
@@ -414,7 +414,7 @@ function App() {
                   </div>
                   <h4 className="text-lg font-bold text-neutral-100">Message Sent Successfully</h4>
                   <p className="text-sm text-neutral-400">
-                    Thank you for reaching out, Abhig will get back to you as soon as possible.
+                    Thank you for reaching out, I will get back to you as soon as possible.
                   </p>
                   <button
                     onClick={resetFormStatus}
