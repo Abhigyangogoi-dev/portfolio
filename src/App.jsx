@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import developerPortrait from './assets/pic.jpeg'
+import certDsa from './assets/dsa.png'
+import certCpp from './assets/cpp.png'
+import certWeb from './assets/web.png'
 import {
   SiReact, SiJavascript, SiTailwindcss, SiHtml5, SiVite, SiTypescript,
   SiNodedotjs, SiExpress, SiPostgresql, SiMongodb, SiGraphql,
-  SiGit, SiDocker, SiAmazonwebservices, SiLinux, SiVercel, SiGithub
+  SiDocker, SiLinux, SiVercel, SiGithub
 } from 'react-icons/si'
-import { TbApi, TbPipeline } from 'react-icons/tb'
+import { FaAws } from 'react-icons/fa'
+import { TbApi, TbGitBranch } from 'react-icons/tb'
 
 const SKILL_ICONS = {
   'React': { icon: SiReact, color: '#61DAFB' },
@@ -22,8 +26,8 @@ const SKILL_ICONS = {
   'GraphQL': { icon: SiGraphql, color: '#E10098' },
   'Git & GitHub': { icon: SiGithub, color: '#aaaaaa' },
   'Docker': { icon: SiDocker, color: '#2496ED' },
-  'AWS (S3/EC2)': { icon: SiAmazonwebservices, color: '#FF9900' },
-  'CI/CD Pipelines': { icon: TbPipeline, color: '#22D3EE' },
+  'AWS (S3/EC2)': { icon: FaAws, color: '#FF9900' },
+  'CI/CD Pipelines': { icon: TbGitBranch, color: '#22D3EE' },
   'Linux Shell': { icon: SiLinux, color: '#FCC624' },
   'Vercel': { icon: SiVercel, color: '#aaaaaa' },
 }
@@ -74,7 +78,7 @@ const CERTIFICATES = [
     date: "Dec 2024",
     credentialId: "20A10D635J9AK00L8",
     link: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BTDlpXyM%2BHGcn400eCT%2Ft94zB1F2GAuL8%3D",
-    image: './assets/dsa.png'
+    image: certDsa
   },
   {
     title: "Object Oriented Programming",
@@ -82,7 +86,7 @@ const CERTIFICATES = [
     date: "Dec 2024",
     credentialId: "270k8Cl2dm7D23d77",
     link: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BlfO1oQtDvi4S3wv7twfmjbGZNi8a2v%2B0%3D",
-    image: './assets/cpp.png'
+    image: certCpp
   },
   {
     title: "Legacy Responsive Web Design V8",
@@ -90,7 +94,7 @@ const CERTIFICATES = [
     date: "Dec 2023",
     credentialId: "fccb36e6efe-7b12-45b3-aaa0-bfb36942cd8d",
     link: "https://www.freecodecamp.org/certification/fccb36e6efe-7b12-45b3-aaa0-bfb36942cd8d/responsive-web-design",
-    image: './assets/web.png'
+    image: certWeb
   }
 ]
 
