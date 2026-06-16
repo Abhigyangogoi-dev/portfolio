@@ -8,24 +8,24 @@ import {
 import { TbApi, TbPipeline } from 'react-icons/tb'
 
 const SKILL_ICONS = {
-  'React':              { icon: SiReact,            color: '#61DAFB' },
-  'JavaScript (ES6+)':  { icon: SiJavascript,       color: '#F7DF1E' },
-  'Tailwind CSS':       { icon: SiTailwindcss,      color: '#06B6D4' },
-  'HTML5 & CSS3':       { icon: SiHtml5,            color: '#E34F26' },
-  'Vite':               { icon: SiVite,             color: '#646CFF' },
-  'TypeScript':         { icon: SiTypescript,       color: '#3178C6' },
-  'Node.js':            { icon: SiNodedotjs,        color: '#339933' },
-  'Express.js':         { icon: SiExpress,          color: '#aaaaaa' },
-  'REST APIs':          { icon: TbApi,              color: '#FF6B6B' },
-  'PostgreSQL':         { icon: SiPostgresql,       color: '#4169E1' },
-  'MongoDB':            { icon: SiMongodb,          color: '#47A248' },
-  'GraphQL':            { icon: SiGraphql,          color: '#E10098' },
-  'Git & GitHub':       { icon: SiGithub,           color: '#aaaaaa' },
-  'Docker':             { icon: SiDocker,           color: '#2496ED' },
-  'AWS (S3/EC2)':       { icon: SiAmazonwebservices,color: '#FF9900' },
-  'CI/CD Pipelines':    { icon: TbPipeline,         color: '#22D3EE' },
-  'Linux Shell':        { icon: SiLinux,            color: '#FCC624' },
-  'Vercel':             { icon: SiVercel,           color: '#aaaaaa' },
+  'React': { icon: SiReact, color: '#61DAFB' },
+  'JavaScript (ES6+)': { icon: SiJavascript, color: '#F7DF1E' },
+  'Tailwind CSS': { icon: SiTailwindcss, color: '#06B6D4' },
+  'HTML5 & CSS3': { icon: SiHtml5, color: '#E34F26' },
+  'Vite': { icon: SiVite, color: '#646CFF' },
+  'TypeScript': { icon: SiTypescript, color: '#3178C6' },
+  'Node.js': { icon: SiNodedotjs, color: '#339933' },
+  'Express.js': { icon: SiExpress, color: '#aaaaaa' },
+  'REST APIs': { icon: TbApi, color: '#FF6B6B' },
+  'PostgreSQL': { icon: SiPostgresql, color: '#4169E1' },
+  'MongoDB': { icon: SiMongodb, color: '#47A248' },
+  'GraphQL': { icon: SiGraphql, color: '#E10098' },
+  'Git & GitHub': { icon: SiGithub, color: '#aaaaaa' },
+  'Docker': { icon: SiDocker, color: '#2496ED' },
+  'AWS (S3/EC2)': { icon: SiAmazonwebservices, color: '#FF9900' },
+  'CI/CD Pipelines': { icon: TbPipeline, color: '#22D3EE' },
+  'Linux Shell': { icon: SiLinux, color: '#FCC624' },
+  'Vercel': { icon: SiVercel, color: '#aaaaaa' },
 }
 
 const SKILLS = [
@@ -74,7 +74,7 @@ const CERTIFICATES = [
     date: "Dec 2024",
     credentialId: "20A10D635J9AK00L8",
     link: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BTDlpXyM%2BHGcn400eCT%2Ft94zB1F2GAuL8%3D",
-    image: null // replace with: import cert1 from './assets/cert-dsa.png'
+    image: './assets/dsa.png'
   },
   {
     title: "Object Oriented Programming",
@@ -82,7 +82,7 @@ const CERTIFICATES = [
     date: "Dec 2024",
     credentialId: "270k8Cl2dm7D23d77",
     link: "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2BlfO1oQtDvi4S3wv7twfmjbGZNi8a2v%2B0%3D",
-    image: null // replace with: import cert2 from './assets/cert-oop.png'
+    image: './assets/cpp.png'
   },
   {
     title: "Legacy Responsive Web Design V8",
@@ -90,7 +90,7 @@ const CERTIFICATES = [
     date: "Dec 2023",
     credentialId: "fccb36e6efe-7b12-45b3-aaa0-bfb36942cd8d",
     link: "https://www.freecodecamp.org/certification/fccb36e6efe-7b12-45b3-aaa0-bfb36942cd8d/responsive-web-design",
-    image: null // replace with: import cert3 from './assets/cert-webdesign.png'
+    image: './assets/web.png'
   }
 ]
 
