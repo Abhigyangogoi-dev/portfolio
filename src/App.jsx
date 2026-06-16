@@ -437,7 +437,7 @@ function App() {
 
               <div className="flex gap-4 pt-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Abhigyangogoi-dev"
                   target="_blank"
                   rel="noreferrer"
                   className="p-2 border border-neutral-900 hover:border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900 hover:text-neutral-100 rounded-lg text-neutral-400 transition-colors"
@@ -448,7 +448,7 @@ function App() {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/abhigyangogoi"
                   target="_blank"
                   rel="noreferrer"
                   className="p-2 border border-neutral-900 hover:border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900 hover:text-neutral-100 rounded-lg text-neutral-400 transition-colors"
